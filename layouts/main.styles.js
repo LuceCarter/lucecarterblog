@@ -5,10 +5,13 @@ export default css.global`
   :root {
     --color-primary: #84b9f5;
     --color-secondary: #16875d;
-    --color-tertiary: #84b9f5;
+    --color-tertiary: #ffb151;
     --color-foreground: #283848;
     --color-background: #ffffff;
     --color-muted: #666666;
+    --color-header: #0f2745;
+    --color-nav: #2E4557;
+    --color-sociallinks: #1da1f2;
 
     --grid-unit: 0.5rem;
 
@@ -29,8 +32,8 @@ export default css.global`
 
     --wrapper-max-width: 48rem;
 
-    --header-nav-item-active-color: #b7ded0;
-    --footer-copyright-color: #b7ded0;
+    --header-nav-item-active-color: #ffb151;
+    --footer-copyright-color: #419Dd8;
     --external-url-background-color: #b7ded0;
   }
 

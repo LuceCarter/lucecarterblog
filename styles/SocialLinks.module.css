@@ -22,7 +22,7 @@
 .socialLinks__listItemLink {
   display: block;
   cursor: pointer;
-  color: var(--color-foreground);
+  color: var(--color-sociallinks);
 }
 
 .socialLinks__listItemLink:focus {
