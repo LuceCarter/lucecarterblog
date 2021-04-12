@@ -542,6 +542,7 @@ export default class ContentfulApi {
       const data = await fetch(fetchUrl, fetchOptions).then((response) =>
         response.json(),
       );
+
       return data;
     } catch (error) {
       throw new Error("Could not fetch data from Contentful!");
