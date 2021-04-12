@@ -13,15 +13,15 @@ const SITE_URL = "https://nextjs-contentful-blog-starter.vercel.app";
 
 export const Config = {
   site: {
-    owner: "A. Blogger",
-    title: "My new Next.js + Contentful blog site",
-    domain: "nextjs-contentful-blog-starter.vercel.app",
-    email: "example@example.com",
-    feedDescription: "RSS Feed for example.com",
+    owner: "Luce Carter",
+    title: "Luce Carter Blog",
+    domain: "www.lucecarter.co.uk",
+    email: "luce@lucyscarter.co.uk",
+    feedDescription: "RSS Feed for lucecarter.co.uk",
   },
   pageMeta: {
     openGraph: {
-      twitterUser: "contentful",
+      twitterUser: "LuceCarter1",
     },
     home: {
       url: SITE_URL,
@@ -47,7 +47,7 @@ export const Config = {
     },
   },
   pagination: {
-    pageSize: 2,
+    pageSize: 8,
     recentPostsSize: 3,
   },
   menuLinks: [
