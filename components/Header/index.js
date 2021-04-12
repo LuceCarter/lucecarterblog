@@ -16,7 +16,8 @@ export default function Header() {
             className={HeaderStyles.header__logoContainerLink}
             aria-label="Navigate to home page"
           >
-            <Logo />
+            <img src="logo.png" alt="Luce Carter Logo" className={HeaderStyles.header__logoBanner} />
+            {/* <Logo /> */}
           </a>
         </Link>
       </div>

@@ -3,11 +3,15 @@
   flex-direction: column;
 }
 
+.header__logoBanner {
+  width: 25%;
+}
+
 .header__logoContainer {
   display: flex;
   justify-content: center;
   background-color: var(--color-foreground);
-  padding: 1rem;
+  padding: 1rem;  
 }
 
 .header__logoContainerLink {
