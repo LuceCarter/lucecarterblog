@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://nextjs-contentful-blog-starter.vercel.app/",
+  siteUrl: "https://lucecarterblog.vercel.app/",
   generateRobotsTxt: true, // (optional)
   robotsTxtOptions: {
     policies: [{ userAgent: "*", disallow: "/api" }],
@@ -7,7 +7,7 @@ module.exports = {
   exclude: ["/api/*", "/server-sitemap.xml"],
   robotsTxtOptions: {
     additionalSitemaps: [
-      "https://nextjs-contentful-blog-starter.vercel.app/server-sitemap.xml",
+      "https://lucecarterblog.vercel.app/server-sitemap.xml",
     ],
   },
 };

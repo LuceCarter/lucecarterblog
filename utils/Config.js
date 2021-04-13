@@ -9,7 +9,7 @@
  *
  */
 
-const SITE_URL = "https://nextjs-contentful-blog-starter.vercel.app";
+const SITE_URL = "lucecarter-blog.vercel.app";
 
 export const Config = {
   site: {
