@@ -12,7 +12,7 @@ export default function DadJoke() {
            setJoke(dadJoke);
        })();
         
-    }, [joke]);
+    }, []);
 
     return (
         <div className={DadJokeStyles.dadJoke}>          
