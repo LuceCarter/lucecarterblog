@@ -5,6 +5,7 @@
 
 .header__logoBanner {
   width: 25%;
+  height: auto;
 }
 
 .header__logoContainer {
