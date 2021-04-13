@@ -1,9 +1,10 @@
 import HeaderStyles from "@styles/Header.module.css";
 import Link from "next/link";
 import SocialLinks from "@components/SocialLinks";
+import DadJoke from "@components/DadJoke";
 import { useRouter } from "next/router";
 import { Config } from "@utils/Config";
-import Logo from "./svg/Logo";
+
 
 export default function Header() {
   const router = useRouter();
@@ -16,7 +17,7 @@ export default function Header() {
             className={HeaderStyles.header__logoContainerLink}
             aria-label="Navigate to home page"
           >
-            <img src="logo.png" alt="Luce Carter Logo" className={HeaderStyles.header__logoBanner} />
+            <img src="/logo.png" alt="Luce Carter Logo" className={HeaderStyles.header__logoBanner} />
             {/* <Logo /> */}
           </a>
         </Link>
@@ -54,6 +55,7 @@ export default function Header() {
         </ul>
       </nav>
       <SocialLinks />
+      <DadJoke />
     </header>
   );
 }
