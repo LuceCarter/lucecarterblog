@@ -4,14 +4,16 @@ import "prismjs/themes/prism-okaidia.css";
 export default css.global`
   :root {
     --color-primary: #84b9f5;
-    --color-secondary: #16875d;
-    --color-tertiary: #ffb151;
+    --color-secondary: #ffb151;
+    --color-tertiary: #ffa466;
     --color-foreground: #283848;
     --color-background: #ffffff;
     --color-muted: #666666;
     --color-header: #0f2745;
     --color-nav: #2E4557;
     --color-sociallinks: #1da1f2;
+    --color-dadjoke: #ffb151;
+    --color-tags: linear-gradient(var(--color-secondary), var(--color-tertiary));
 
     --grid-unit: 0.5rem;
 
