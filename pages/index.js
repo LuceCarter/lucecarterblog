@@ -15,7 +15,7 @@ export default function Home(props) {
 
   const pageDescription = pageContent
     ? pageContent.description
-    : "Welcome to the Next.js Contentful blog starter";
+    : "Welcome to Luce Carter's blog";
 
   return (
     <>
