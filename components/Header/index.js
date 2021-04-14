@@ -22,6 +22,10 @@ export default function Header() {
           </a>
         </Link>
       </div>
+      <div className={HeaderStyles.header__dadJokeContainer}>
+        <DadJoke />
+      </div>
+      
       <nav className={HeaderStyles.header__nav} role="navigation">
         <ul className={HeaderStyles.header__navList}>
           {Config.menuLinks.map((link) => {
@@ -54,8 +58,7 @@ export default function Header() {
           })}
         </ul>
       </nav>
-      <SocialLinks />
-      <DadJoke />
+      <SocialLinks />     
     </header>
   );
 }

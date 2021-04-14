@@ -8,7 +8,7 @@ export default function DadJoke() {
 
     useEffect(async () => {
       const dadJoke = await getDadJoke();
-      setJoke(dadJoke);
+      setJoke(`🧀 ${dadJoke} 🧀`);
     }, []);
 
     return (
