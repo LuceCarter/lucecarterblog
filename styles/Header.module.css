@@ -5,7 +5,6 @@
 
 .header__logoBanner {
   width: 25%;  
-  object-fit: contain;
 }
 
 .header__logoContainer {
@@ -20,6 +19,7 @@
   display: inline-flex;
   width: 100%;
   justify-content: center;
+  object-fit: contain;
 }
 
 .header__logoContainerLink:focus {
