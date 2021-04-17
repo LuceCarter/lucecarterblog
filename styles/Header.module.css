@@ -16,9 +16,7 @@
 
 .header__logoContainerLink {
   text-decoration: none;
-  display: inline-flex;
-  width: 10%;
-  height: 10%;  
+  display: inline-flex;  
   justify-content: center;
   object-fit: contain;
 }
