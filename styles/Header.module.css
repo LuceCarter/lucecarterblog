@@ -6,6 +6,7 @@
 .header__logoBanner {
   width: 25%;
   height: auto;
+  object-fit: contain;
 }
 
 .header__logoContainer {
