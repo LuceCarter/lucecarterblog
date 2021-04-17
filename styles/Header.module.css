@@ -3,16 +3,19 @@
   flex-direction: column;
 }
 
-.header__logoBanner {
-  width: 25%;
-  height: auto;
-}
-
 .header__logoContainer {
   display: flex;
   justify-content: center;
   background-color: var(--color-header);
-  padding: 1rem;  
+  padding: 1rem;
+  max-width: 100%;
+  height: auto;  
+}
+
+.header__logoBanner {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .header__logoContainerLink {
@@ -34,7 +37,6 @@
 }
 
 .header__logo {
-  height: 4rem;
   margin: 0 1rem;
 }
 
