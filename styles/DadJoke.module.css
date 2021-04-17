@@ -1,6 +1,6 @@
 .dadJoke {
     color: var(--color-dadjoke);
     font-size: 1.5rem;
-    padding-bottom: 2rem;   
+    display: flex;
   justify-content: center;
 }
