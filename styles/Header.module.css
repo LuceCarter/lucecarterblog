@@ -9,13 +9,13 @@
   background-color: var(--color-header);
   padding: 1rem;
   max-width: 100%;
-  height: auto;  
+  height: auto;
+  object-fit: contain;  
 }
 
 .header__logoBanner {
   max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: auto;  
 }
 
 .header__logoContainerLink {
