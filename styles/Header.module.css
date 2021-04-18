@@ -1,28 +1,15 @@
 .header {
   display: flex;
   flex-direction: column;
-}
-
-.header__logoContainer {
-  display: flex;
-  justify-content: center;
   background-color: var(--color-header);
-  padding: 1rem;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;  
-}
-
-.header__logoBanner {
-  max-width: 100%;
-  height: auto;  
 }
 
 .header__logoContainerLink {
   text-decoration: none;
-  display: inline-flex;
-  width: 100%;
-  justify-content: center;
+  display: block;
+  width: 18rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header__logoContainerLink:focus {
@@ -43,8 +30,11 @@
 .header__dadJokeContainer {
   display: flex;
   justify-content: center;
-  background-color: var(--color-header);
   padding: 1rem 1rem 2rem 1rem;
+  max-width: var(--wrapper-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .header__nav {
