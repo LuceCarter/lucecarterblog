@@ -1,6 +1,7 @@
 import HeaderStyles from "@styles/Header.module.css";
 import Link from "next/link";
 import SocialLinks from "@components/SocialLinks";
+import Spotify from "@components/Spotify";
 import DadJoke from "@components/DadJoke";
 import { useRouter } from "next/router";
 import { Config } from "@utils/Config";
@@ -19,7 +20,6 @@ export default function Header() {
               className={HeaderStyles.header__logoContainerLink}
               aria-label="Navigate to home page"
             >
-
               <Image src={LOGO_URL} alt="Luce Carter Logo" height="1080" width="1920" layout="responsive" />
             </a>
           </Link>
@@ -61,7 +61,8 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-      <SocialLinks />     
+      <SocialLinks />
+      <Spotify />     
   </>
   );
 }
