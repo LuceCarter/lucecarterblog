@@ -8,8 +8,13 @@
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
+}
 
-
+.playingAnimation {
+    display: flex;
+    max-width: 10%;
+    max-height: 10%;    
+    align-items: center;
 }
 
 .nowPlaying {
