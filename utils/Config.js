@@ -9,13 +9,13 @@
  *
  */
 
-const SITE_URL = "lucecarter-blog.vercel.app";
+const SITE_URL = "https://lucecarter.co.uk";
 
 export const Config = {
   site: {
     owner: "Luce Carter",
     title: "Luce Carter Blog",
-    domain: "www.lucecarter.co.uk",
+    domain: "lucecarter.co.uk",
     email: "luce@lucyscarter.co.uk",
     feedDescription: "RSS Feed for lucecarter.co.uk",
   },
