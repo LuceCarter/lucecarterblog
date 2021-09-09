@@ -16,10 +16,67 @@
  * Explore the application in the UI here: https://og-image.vercel.app/
  */
 
+const CLOUD_NAME = "luce-carter-blog";
+const IMG_WIDTH = 831;
+const IMG_HEIGHT = 466;
+
+function cleanText(text) {  
+  var spacedString = encodeURIComponent(text).replace(/-/g, " ");
+  return spacedString.charAt(0).toUpperCase().slice(1);
+}
+
 export default class OpenGraph {
-  static generateImageUrl(title) {
-    return `https://og-image.vercel.app/${encodeURI(
-      title,
-    )}.png?theme=light&md=0fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg&images=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOSIgaGVpZ2h0PSIzMiI%2BCiAgPHBhdGggZmlsbD0iI0ZGRDg1RiIgZD0iTTkuNyAyMi4zQzggMjAuNyA3IDE4LjUgNyAxNnMxLTQuNyAyLjYtNi4zYzEuNC0xLjQgMS40LTMuNiAwLTVzLTMuNi0xLjQtNSAwQzEuOCA3LjYgMCAxMS42IDAgMTZzMS44IDguNCA0LjcgMTEuM2MxLjQgMS40IDMuNiAxLjQgNSAwIDEuMy0xLjQgMS4zLTMuNiAwLTV6Ij48L3BhdGg%2BCiAgPHBhdGggZmlsbD0iIzNCQjRFNyIgZD0iTTkuNyA5LjdDMTEuMyA4IDEzLjUgNyAxNiA3czQuNyAxIDYuMyAyLjZjMS40IDEuNCAzLjYgMS40IDUgMHMxLjQtMy42IDAtNUMyNC40IDEuOCAyMC40IDAgMTYgMFM3LjYgMS44IDQuNyA0LjdjLTEuNCAxLjQtMS40IDMuNiAwIDUgMS40IDEuMyAzLjYgMS4zIDUgMHoiPjwvcGF0aD4KICA8cGF0aCBmaWxsPSIjRUQ1QzY4IiBkPSJNMjIuMyAyMi4zQzIwLjcgMjQgMTguNSAyNSAxNiAyNXMtNC43LTEtNi4zLTIuNmMtMS40LTEuNC0zLjYtMS40LTUgMHMtMS40IDMuNiAwIDVDNy42IDMwLjIgMTEuNiAzMiAxNiAzMnM4LjQtMS44IDExLjMtNC43YzEuNC0xLjQgMS40LTMuNiAwLTUtMS40LTEuMy0zLjYtMS4zLTUgMHoiPjwvcGF0aD4KICA8Y2lyY2xlIGN4PSI3LjIiIGN5PSI3LjIiIHI9IjMuNSIgZmlsbD0iIzMwOEJDNSI%2BPC9jaXJjbGU%2BCiAgPGNpcmNsZSBjeD0iNy4yIiBjeT0iMjQuOCIgcj0iMy41IiBmaWxsPSIjRDU0NjVGIj48L2NpcmNsZT4KPC9zdmc%2B`;
+  static generateImageUrl({
+    title,
+    imagePublicID = "post_template.png",
+    cloudinaryUrlBase = "https://res.cloudinary.com",
+    imageWidth = IMG_WIDTH,
+    imageHeight = IMG_HEIGHT,
+    textAreaWidth = 760,
+
+    titleFont = "worksans",
+    titleGravity = "south_west",
+    titleBottomOffset = 100,
+    titleLeftOffset = 50,
+    titleColor = "ffffff",
+    titleFontSize = 100,
+
+    version = null,
+  }) {
+
+    const imageConfig = [
+      `w_${imageWidth}`,
+      `h_${imageHeight}`,
+      "c_fill",
+      "q_auto",
+      "f_auto",
+      "r_20",
+    ].join(",");
+
+    const titleConfig = [
+      `w_${textAreaWidth}`,
+      "c_fit",
+      `co_rgb:${titleColor}`,
+      `g_${titleGravity}`,
+      `x_${titleLeftOffset}`,
+      `y_${titleBottomOffset}`,
+      `l_text:${titleFont}_${titleFontSize}:${cleanText(title)}`,
+    ].join(",");
+
+    const urlParts = [
+      cloudinaryUrlBase,
+      CLOUD_NAME,
+      "image",
+      "upload",
+      imageConfig,
+      titleConfig,
+      version,
+      imagePublicID,
+    ]
+
+    console.log(urlParts.filter(Boolean));
+    // remove any falsy sections of the URL (e.g. an undefined version)
+    return urlParts.filter(Boolean);
+
   }
 }
