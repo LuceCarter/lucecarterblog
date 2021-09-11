@@ -58,6 +58,17 @@ export default function Header() {
                 </li>
               );
             })}
+             <li className={HeaderStyles.header__navListItem}>
+            <a
+              href="https://www.getrevue.co/profile/luce/"
+              className={HeaderStyles.header__navListItemLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Subscribe to my newsletter"
+            >
+              Newsletter
+            </a>
+          </li>
           </ul>
         </nav>
       </header>
