@@ -9,8 +9,7 @@ const SPOTIFY_LOGO_URL = "https://images.ctfassets.net/f37i8279gxv6/4G1437y06Vmt
 
 export default function Spotify(props) {
 
-    const { data } = useSWR('/api/now-playing', fetcher);
-    console.log(data);
+    const { data } = useSWR('/api/now-playing', fetcher);   
 
     const animationOptions = {
       loop: true,

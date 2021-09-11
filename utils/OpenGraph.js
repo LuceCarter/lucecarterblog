@@ -73,8 +73,7 @@ export default class OpenGraph {
       version,
       imagePublicID,
     ]
-
-    console.log(urlParts.filter(Boolean));
+       
     // remove any falsy sections of the URL (e.g. an undefined version)
     return urlParts.filter(Boolean);
 
