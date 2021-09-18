@@ -1,25 +1,20 @@
 .button {
   border-radius: 0;
   border: 0.125rem solid var(--color-foreground);
+  color: var(--header-nav-item-active-color);
   text-transform: uppercase;
   font-family: var(--font-family-main);
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: inline-block;
   background-color: var(--color-foreground);
-  padding: 0.5rem 1rem;
-  color: var(--color-background);
+  padding: 0.5rem 1rem; 
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   font-weight: var(--font-weight-normal);
   border: 0.125rem solid var(--color-background);
   margin-bottom: 2rem;
-}
-
-.button:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  box-shadow: none;
+  border-radius: 10px;
 }
 
 .button:focus {

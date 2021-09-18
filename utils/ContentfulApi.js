@@ -517,6 +517,33 @@ export default class ContentfulApi {
     return totalPosts;
   }
 
+  static async getAllUsesEntries() {
+    var usesEntries = [];
+
+    const query = `
+    {
+      usesEntryCollection {
+        items {
+          name,
+          toolUrl,
+          description {
+            json
+          },
+          toolIcon {
+            url,
+            description
+          }
+        }       
+      }
+    }
+    `;
+
+    const response = await this.callContentful(query);
+
+    usesEntries = response ? response.data.usesEntryCollection.items : [];   
+    return usesEntries;
+  }
+
   /**
    * Call the Contentful GraphQL API using fetch.
    *
