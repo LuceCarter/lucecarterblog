@@ -37,6 +37,17 @@ export default css.global`
     --header-nav-item-active-color: #ffb151;
     --footer-copyright-color: #419Dd8;
     --external-url-background-color: #b7ded0;
+
+    --screen-med: 768px;
+    --hamburger_padding-x: 16px;
+    --hamburger_padding-y: 16px;
+    --hamburger_layer-width: 32px;
+    --hamburger_layer-height: 4px;
+    --hamburger_layer-spacing: 6px;
+    --hamburger_layer-color: var(--color-secondary);
+    --hamburger_layer-border-radius: 1px;
+    --hamburger_hover-opacity: 0.9;
+    --hamburger_active-hover-opacity: var(--hamburger_hover-opacity);
   }
 
   html {

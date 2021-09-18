@@ -1,3 +1,4 @@
+import { useState } from "react";
 import HeaderStyles from "@styles/Header.module.css";
 import Link from "next/link";
 import SocialLinks from "@components/SocialLinks";
@@ -11,6 +12,20 @@ const LOGO_URL = "https://images.ctfassets.net/f37i8279gxv6/1HJrK7EkbnZbp6IU4r0p
 
 export default function Header() {
   const router = useRouter();
+  
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function toggleHambuger() {
+    setMenuOpen(!menuOpen);
+  }
+
+  const hamburgerClasses = menuOpen
+    ? `${HeaderStyles.hamburger} ${HeaderStyles.is__open}`
+    : `${HeaderStyles.hamburger}`;
+
+  const navLinksClasses = menuOpen
+    ? `${HeaderStyles.header__navList}`
+    : `${HeaderStyles.header__navList} ${HeaderStyles.header__navList__hide}`;
 
   return (
     <>
@@ -29,35 +44,43 @@ export default function Header() {
         </div>
         
         <nav className={HeaderStyles.header__nav} role="navigation">
-          <ul className={HeaderStyles.header__navList}>
-            {Config.menuLinks.map((link) => {
-              const onBlogPost =
-                router.pathname === Config.pageMeta.post.slug &&
-                link.path === Config.pageMeta.blogIndex.slug;
+          <button
+            className={hamburgerClasses}
+            onClick={() => toggleHambuger()}
+            aria-expanded={menuOpen}
+            aria-label="Hamburger Menu Toggle"
+            aria-controls="headerLinks"
+            type="button">
+              <span className={HeaderStyles.hamburger__box}>
+            <span className={HeaderStyles.hamburger__inner}></span>
+          </span>
+          <span className={HeaderStyles.hamburger__text}>Menu</span>
+        </button>
 
-              const onBlogIndexPage =
-                router.pathname === Config.pageMeta.blogIndexPage.slug &&
-                link.path === Config.pageMeta.blogIndex.slug;
+          <ul className={navLinksClasses}>
+          {Config.menuLinks.map((link) => {
+            const isActive =
+              (router.pathname === Config.pageMeta.post.slug &&
+                link.path === Config.pageMeta.blogIndex.slug) ||
+              router.pathname === link.path;
 
-              const isActive =
-                onBlogPost || onBlogIndexPage || router.pathname === link.path;
-              const isActiveClass = isActive
-                ? ` ${HeaderStyles.header__navListItem__active}`
-                : "";
+            const isActiveClass = isActive
+              ? ` ${HeaderStyles.header__navListItem__active}`
+              : "";
 
-              return (
-                <li
-                  key={link.displayName}
-                  className={HeaderStyles.header__navListItem + isActiveClass}
-                >
-                  <Link href={link.path}>
-                    <a className={HeaderStyles.header__navListItemLink}>
-                      {link.displayName}
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
+            return (
+              <li
+                key={link.displayName}
+                className={HeaderStyles.header__navListItem + isActiveClass}
+              >
+                <Link href={link.path}>
+                  <a className={HeaderStyles.header__navListItemLink}>
+                    {link.displayName}
+                  </a>
+                </Link>
+              </li>
+            );
+          })}
              <li className={HeaderStyles.header__navListItem}>
             <a
               href="https://www.getrevue.co/profile/luce/"
