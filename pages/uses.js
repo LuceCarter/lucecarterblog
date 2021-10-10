@@ -7,6 +7,7 @@ import HeroBanner from "@components/HeroBanner";
 import ContentWrapper from "@components/ContentWrapper";
 import PageContentWrapper from "@components/PageContentWrapper";
 import UsesEntry from "@components/UsesEntry";
+import UsesPage from "@styles/UsesPage.module.css";
 
 export default function Uses(props) {
   const { pageContent, toolNames } = props;
@@ -29,15 +30,14 @@ export default function Uses(props) {
         {pageContent && pageContent.heroBanner !== null && (
           <HeroBanner data={pageContent.heroBanner} />
         )}
-
-        <ContentWrapper>
+       
           {pageContent && pageContent.body && (
             <PageContentWrapper>
               <RichTextPageContent richTextBodyField={pageContent.body} />             
             </PageContentWrapper>
-          )}
-          <UsesEntry toolNames={toolNames} />           
-        </ContentWrapper>                               
+          )} 
+            <UsesEntry toolNames={toolNames} />                  
+                                     
       </MainLayout>
     </>
   );
