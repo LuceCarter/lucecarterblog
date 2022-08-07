@@ -5,14 +5,14 @@ export default css.global`
   :root {
     --color-primary: #84b9f5;
     --color-secondary: #ffb151;
-    --color-tertiary: #ffa466;
-    --color-foreground: #283848;
+    --color-tertiary: #F47E24;
+    --color-foreground: #323E48;
     --color-background: #ffffff;
     --color-muted: #666666;
-    --color-header: #0f2745;
-    --color-nav: #2E4557;
-    --color-sociallinks: #1da1f2;
-    --color-dadjoke: #ffb151;
+    --color-header: #323E48;
+    --color-nav: #575F69;
+    --color-sociallinks: #575F69;
+    --color-dadjoke: #F9A01B;
     --color-tags: linear-gradient(var(--color-secondary), var(--color-tertiary));
 
     --grid-unit: 0.5rem;
@@ -21,10 +21,10 @@ export default css.global`
     --font-weight-normal: 400;
     --font-weight-bold: 700;
 
-    --font-family-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    --font-family-heading: -apple-system, BlinkMacSystemFont, "Soleil", Roboto,
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol";
-    --font-family-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    --font-family-body: -apple-system, BlinkMacSystemFont, "Soleil", Roboto,
       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
       "Segoe UI Symbol";
     --font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
@@ -34,9 +34,9 @@ export default css.global`
 
     --wrapper-max-width: 48rem;
 
-    --header-nav-item-active-color: #ffb151;
-    --footer-copyright-color: #419Dd8;
-    --external-url-background-color: #b7ded0;
+    --header-nav-item-active-color: #F9A01B;
+    --footer-copyright-color: #575F69;
+    --external-url-background-color: #575F69;
 
     --screen-med: 768px;
     --hamburger_padding-x: 16px;

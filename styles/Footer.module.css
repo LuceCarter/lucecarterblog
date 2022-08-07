@@ -13,7 +13,7 @@
   line-height: 1.6;
   font-weight: var(--font-weight-bold);
   font-family: var(--font-family-main);
-  color: var(--footer-copyright-color);
+  color: var(--color-secondary);
   display: flex;
   justify-content: center;
   align-content: center;

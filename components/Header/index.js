@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import { Config } from "@utils/Config";
 import Image from "next/image";
 
-const LOGO_URL = "https://images.ctfassets.net/f37i8279gxv6/1HJrK7EkbnZbp6IU4r0pTV/66f3b6a303e1793735850ed5dbcf8eb5/footer_logo.png";
+const LOGO_URL = "https://images.ctfassets.net/f37i8279gxv6/4Vf1oOaCqYL27OMSYxBPj7/3f1737e2eae123559867128f10b6dc49/LuceCarter_Logo_Wordmark_Orange_RGB.png";
 
 export default function Header() {
   const router = useRouter();
