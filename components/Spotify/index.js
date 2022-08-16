@@ -2,7 +2,7 @@ import SpotifyStyles from "@styles/Spotify.module.css";
 import fetcher from "lib/fetcher"
 import useSWR from "swr"
 import Image from "next/image"
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import animationData from "./playing.json";
 
 const SPOTIFY_LOGO_URL = "https://images.ctfassets.net/f37i8279gxv6/4G1437y06VmtBpD0jf7TBc/deaec69060fda0cbd2a1761300fb41c4/spotify.png";
