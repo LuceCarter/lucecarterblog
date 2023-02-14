@@ -31,3 +31,6 @@ yarn-error.log*
 
 # Generated XML feed at build time
 public/feed.xml
+/test-results/
+/playwright-report/
+/playwright/.cache/
