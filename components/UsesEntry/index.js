@@ -1,6 +1,6 @@
 import RichTextPageContent from "@components/RichTextPageContent";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import UsesEntryStyles from "@styles/UsesEntry.module.css";
 import ButtonStyles from "@styles/Button.module.css";
 

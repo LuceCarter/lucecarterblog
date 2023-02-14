@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import AuthorStyles from "@styles/Author.module.css";
 import TypographyStyles from "@styles/Typography.module.css";
 

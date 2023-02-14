@@ -30,7 +30,7 @@ export default function PostList(props) {
               <div className={ContentListStyles.contentList__excerpt}>
                 <ReactMarkdown
                   children={post.excerpt}
-                  renderers={ReactMarkdownRenderers(post.excerpt)}
+                  components={ReactMarkdownRenderers(post.excerpt)}
                 />
               </div>
             </article>

@@ -6,7 +6,7 @@ import Spotify from "@components/Spotify";
 import DadJoke from "@components/DadJoke";
 import { useRouter } from "next/router";
 import { Config } from "@utils/Config";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const LOGO_URL = "https://images.ctfassets.net/f37i8279gxv6/4Vf1oOaCqYL27OMSYxBPj7/3f1737e2eae123559867128f10b6dc49/LuceCarter_Logo_Wordmark_Orange_RGB.png";
 

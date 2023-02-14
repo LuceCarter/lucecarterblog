@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import dynamic from "next/dynamic";
 import RichTextPageContentStyles from "@styles/RichTextPageContent.module.css";
 import TypographyStyles from "@styles/Typography.module.css";
@@ -79,7 +79,7 @@ export function getRichTextRenderOptions(links, options) {
                 href={`#${slugifyString(children[0])}`}
                 aria-label={children}
               >
-                <Link legacyBehavior Icon />
+                <LinkIcon />
               </a>
             </div>
           );

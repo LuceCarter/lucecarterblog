@@ -1,7 +1,7 @@
 import SpotifyStyles from "@styles/Spotify.module.css";
 import fetcher from "lib/fetcher"
 import useSWR from "swr"
-import Image from "next/image"
+import Image from "next/legacy/image";
 import Lottie from "lottie-react";
 import animationData from "./playing.json";
 
