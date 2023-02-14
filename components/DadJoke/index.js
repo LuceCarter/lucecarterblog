@@ -6,9 +6,12 @@ export default function DadJoke() {
 
     const [joke, setJoke] = useState('');
 
-    useEffect(async () => {
-      const dadJoke = await getDadJoke();
-      setJoke(`🧀 ${dadJoke} 🧀`);
+    useEffect(() => {
+      async function fetchDadJoke() {
+        let dadJoke = await getDadJoke();
+        setJoke(`🧀 ${dadJoke} 🧀`);
+      }    
+      fetchDadJoke();
     }, []);
 
     return (
@@ -37,14 +40,12 @@ async function getDadJoke() {
       headers: myHeaders,
       redirect: "follow",
     };
-  
-   await fetch("https://icanhazdadjoke.com/", requestOptions)
-      .then((response) => response.text())
-      .then((result) => {       
-        dadJoke = result;
-      })
-      .catch((error) => console.log("error", error));     
-    
+   try  {
+      const response = await fetch("https://icanhazdadjoke.com/", requestOptions);
+      dadJoke = await response.text();
       return dadJoke;
+    } catch (error) {
+      console.log("error", error);
   }
+}
   
