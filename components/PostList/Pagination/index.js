@@ -27,7 +27,7 @@ export default function Pagination(props) {
             </span>
           )}
           {!prevDisabled && (
-            <Link href={prevPageUrl}>
+            <Link legacyBehavior  href={prevPageUrl}>
               <a>
                 <span
                   className={
@@ -58,7 +58,7 @@ export default function Pagination(props) {
             </span>
           )}
           {!nextDisabled && (
-            <Link href={nextPageUrl}>
+            <Link legacyBehavior  href={nextPageUrl}>
               <a>
                 <span>Next page</span>
                 <span

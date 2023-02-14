@@ -38,7 +38,7 @@ export default function HeroBanner(props) {
         </div>
         {internalLink && ctaText && (
           <div className={HeroBannerStyles.heroBanner__ctaContainer}>
-            <Link href={internalLink}>
+            <Link legacyBehavior  href={internalLink}>
               <a className={ButtonStyles.button}>{ctaText}</a>
             </Link>
           </div>

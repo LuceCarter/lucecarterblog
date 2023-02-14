@@ -79,7 +79,7 @@ export function getRichTextRenderOptions(links, options) {
                 href={`#${slugifyString(children[0])}`}
                 aria-label={children}
               >
-                <LinkIcon />
+                <Link legacyBehavior Icon />
               </a>
             </div>
           );

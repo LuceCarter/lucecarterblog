@@ -19,7 +19,7 @@ export default function PostList(props) {
           <li key={post.sys.id}>
             <article className={ContentListStyles.contentList__post}>
               <PublishedDate date={post.date} />
-              <Link href={`${Config.pageMeta.blogIndex.slug}/${post.slug}`}>
+              <Link legacyBehavior  href={`${Config.pageMeta.blogIndex.slug}/${post.slug}`}>
                 <a className={ContentListStyles.contentList__titleLink}>
                   <h2 className={ContentListStyles.contentList__title}>
                     {post.title}

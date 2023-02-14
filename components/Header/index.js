@@ -30,12 +30,12 @@ export default function Header() {
   return (
     <>
       <header className={HeaderStyles.header}>
-          <Link href="/">
+          <Link legacyBehavior  href="/">
             <a
               className={HeaderStyles.header__logoContainerLink}
               aria-label="Navigate to home page"
             >
-              <Image src={LOGO_URL} alt="Luce Carter Logo" height="1080" width="1920" layout="responsive" />
+              <Image src={LOGO_URL} alt="Luce Carter Logo" height="1080" width="1920" layout="responsive" priority="true" />
             </a>
           </Link>
 
@@ -73,7 +73,7 @@ export default function Header() {
                 key={link.displayName}
                 className={HeaderStyles.header__navListItem + isActiveClass}
               >
-                <Link href={link.path}>
+                <Link legacyBehavior  href={link.path}>
                   <a className={HeaderStyles.header__navListItemLink}>
                     {link.displayName}
                   </a>

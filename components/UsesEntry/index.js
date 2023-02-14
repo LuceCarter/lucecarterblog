@@ -16,7 +16,7 @@ export default function UsesEntry(props) {
                     <h2>{tool.name}</h2>                   
                 </div>               
                 <RichTextPageContent richTextBodyField={tool.description} />
-                <Link href={tool.toolUrl}>
+                <Link legacyBehavior  href={tool.toolUrl}>
                     <a className={ButtonStyles.button}>Learn More...</a>
                 </Link>               
                </div>

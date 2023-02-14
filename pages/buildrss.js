@@ -40,7 +40,7 @@ function buildRssItems(posts) {
           <title>${post.title}</title>
           <description>${post.excerpt}</description>
           <author>${Config.site.email} (${Config.site.owner})</author>
-          <link>https://${Config.site.domain}/blog/${post.slug}</link>
+          <Link legacyBehavior >https://${Config.site.domain}/blog/${post.slug}</link>
           <guid>https://${Config.site.domain}/blog/${post.slug}</guid>
           <pubDate>${post.date}</pubDate>
           ${buildTags(post.tags)}
@@ -63,7 +63,7 @@ export async function getStaticProps() {
       <atom:link href="https://${
         Config.site.domain
       }/feed.xml" rel="self" type="application/rss+xml" />
-      <link>https://${Config.site.domain}</link>
+      <Link legacyBehavior >https://${Config.site.domain}</link>
       <description>${Config.site.feedDescription}</description>
       ${buildRssItems(posts)}
     </channel>

@@ -12,7 +12,7 @@ export default function PageMeta(props) {
 
       {canonical && <link rel="canonical" href={canonical} />}
 
-      <link
+      <link 
         rel="alternate"
         type="application/rss+xml"
         title={`RSS Feed for ${Config.site.domain}`}
@@ -48,8 +48,7 @@ export default function PageMeta(props) {
 
       <link rel="icon" href="/favicon.ico" />
 
-      <link
-        rel="apple-touch-icon"
+      <link rel="apple-touch-icon"
         sizes="180x180"
         href="/apple-touch-icon.png"
       />
@@ -59,7 +58,7 @@ export default function PageMeta(props) {
         sizes="32x32"
         href="/favicon-32x32.png"
       />
-      <link
+      <link 
         rel="icon"
         type="image/png"
         sizes="16x16"

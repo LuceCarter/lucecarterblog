@@ -16,7 +16,7 @@ export default function ExternalUrl(props) {
       </span>
       <p className={ExternalUrlStyles.externalUrl__text}>
         Originally published on{" "}
-        <Link href={url}>
+        <Link legacyBehavior  href={url}>
           <a
             target="_blank"
             rel="nofollow noreferrer"

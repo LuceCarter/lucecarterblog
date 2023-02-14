@@ -20,7 +20,7 @@ export default function RecentPostList(props) {
           <li key={post.sys.id}>
             <article className={ContentListStyles.contentList__post}>
               <PublishedDate date={post.date} />
-              <Link href={`/blog/${post.slug}`}>
+              <Link legacyBehavior  href={`/blog/${post.slug}`}>
                 <a className={ContentListStyles.contentList__titleLink}>
                   <h2 className={ContentListStyles.contentList__title}>
                     {post.title}
@@ -38,7 +38,7 @@ export default function RecentPostList(props) {
           </li>
         ))}
       </ol>
-      <Link href={Config.pageMeta.blogIndex.slug}>
+      <Link legacyBehavior  href={Config.pageMeta.blogIndex.slug}>
         <a className={ButtonStyles.button}>See more articles</a>
       </Link>
     </>
