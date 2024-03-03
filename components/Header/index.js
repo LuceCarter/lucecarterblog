@@ -2,7 +2,7 @@ import { useState } from "react";
 import HeaderStyles from "@styles/Header.module.css";
 import Link from "next/link";
 import SocialLinks from "@components/SocialLinks";
-import Spotify from "@components/Spotify";
+//import Spotify from "@components/Spotify";
 import DadJoke from "@components/DadJoke";
 import { useRouter } from "next/router";
 import { Config } from "@utils/Config";
@@ -96,7 +96,7 @@ export default function Header() {
         </nav>
       </header>
       <SocialLinks />
-      <Spotify />     
+      {/* <Spotify />      */}
   </>
   );
 }
